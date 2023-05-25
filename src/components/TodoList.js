@@ -18,7 +18,7 @@ const TodoList = () => {
         <section className='todo_section'>
             <form action="#">
                 <input type="text" name="" id="" />
-                <input type="button" value="Add Todo" onClick={addTodo} />
+                <input type="button" value="Add" onClick={addTodo} />
             </form>
             <ul>
                 {todos.map((elt, index) => {
