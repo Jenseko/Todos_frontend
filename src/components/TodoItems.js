@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import icon from './img/PngItem_2009230.png';
 
 // ---------------------------------------------------
 
@@ -21,11 +22,13 @@ const TodoItems = (props) => {
         props.delete(newTodoList);
     }
     return (
-        <li style={{ textDecoration: finish ? "line-through" : "none", listStyle: 'none' }}>
-            <input type="checkbox" name="" id="" onChange={done} />
-            <span>{props.todo}</span>
-            <button onClick={deleteTodo}>Delete</button>
-        </li>
+        <div>
+            <li style={{ textDecoration: finish ? "line-through" : "none", listStyle: 'none' }}>
+                <input type="checkbox" name="" id="" onChange={done} />
+                <span>{props.todo}</span>
+                <img src={icon} alt="trash icon" onClick={deleteTodo} />
+            </li>
+        </div>
     );
 }
 

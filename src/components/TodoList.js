@@ -2,7 +2,7 @@ import TodoItems from './TodoItems.js';
 import React, { useState } from 'react';
 
 const TodoList = () => {
-    const [todos, setTodos] = useState(["Go shopping", "play video games", "partymarty"]);
+    const [todos, setTodos] = useState(["go shopping", "play video games", "clean the bathroom"]);
 
     const addTodo = () => {
         // console.log("func works")
@@ -15,7 +15,7 @@ const TodoList = () => {
     }
 
     return (
-        <section>
+        <section className='todo_section'>
             <form action="#">
                 <input type="text" name="" id="" />
                 <input type="button" value="Add Todo" onClick={addTodo} />
