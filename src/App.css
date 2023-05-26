@@ -47,10 +47,6 @@ section ul div li {
   border-radius: 10px;
 }
 
-section ul div li:nth-last-child() {
-  margin-bottom: 30px;
-}
-
 section ul div li input[type="checkbox"] {
   margin: 15px;
 }

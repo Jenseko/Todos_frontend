@@ -1,8 +1,19 @@
+
 import TodoItems from './TodoItems.js';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const TodoList = () => {
     const [todos, setTodos] = useState(["go shopping", "play video games", "clean the bathroom"]);
+
+    useEffect(() => {
+        const getData = async () => {
+            const result = await fetch('http://localhost:3004/todos', {});
+            const data = await result.json();
+            setTodos(data);
+        };
+        getData();
+    }, []);
+
 
     const addTodo = () => {
         // console.log("func works")
