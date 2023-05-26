@@ -13,12 +13,10 @@ const TodoItems = (props) => {
     }
 
     const deleteTodo = () => {
-        // console.log("func works");
         // filtert alles raus was nicht mein einzelnes todo ist
         const newTodoList = props.completeTodoArr.filter((elt) => {
             return elt !== props.todo
         })
-        // console.log(newTodoList);
         props.delete(newTodoList);
     }
     return (

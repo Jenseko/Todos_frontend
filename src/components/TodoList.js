@@ -3,7 +3,8 @@ import TodoItems from './TodoItems.js';
 import React, { useState, useEffect } from 'react';
 
 const TodoList = () => {
-    const [todos, setTodos] = useState(["go shopping", "play video games", "clean the bathroom"]);
+    const [todos, setTodos] = useState(["go shopping", "read a book", "go with the dog"]);
+    const [inputTodo, setInputTodo] = useState("");
 
     useEffect(() => {
         const getData = async () => {
@@ -16,24 +17,21 @@ const TodoList = () => {
 
 
     const addTodo = () => {
-        // console.log("func works")
-        const inputTodo = document.querySelector('form input[type="text"]').value
-        // console.log(inputTodo);
+
         // nimm alles aus todos und füge den value aus dem input zu
         setTodos([...todos, inputTodo]);
-        // cleart das input feld nachdem adden des todos
-        document.querySelector('form input[type="text"]').value = "";
+        // cleart das Inputfeld nach Hinzufügen eines Todos
+        setInputTodo('');
     }
 
     return (
         <section className='todo_section'>
             <form action="#">
-                <input type="text" name="" id="" />
+                <input type="text" value={inputTodo} onChange={(event) => setInputTodo(event.target.value)} />
                 <input type="button" value="Add" onClick={addTodo} />
             </form>
             <ul>
                 {todos.map((elt, index) => {
-                    // console.log(elt);
                     return (
                         <TodoItems
                             key={index}
