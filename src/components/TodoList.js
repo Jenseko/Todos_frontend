@@ -17,7 +17,6 @@ const TodoList = () => {
 
 
     const addTodo = () => {
-
         // nimm alles aus todos und füge den value aus dem input zu
         setTodos([...todos, inputTodo]);
         // cleart das Inputfeld nach Hinzufügen eines Todos
@@ -27,7 +26,7 @@ const TodoList = () => {
     return (
         <section className='todo_section'>
             <form action="#">
-                <input type="text" value={inputTodo} onChange={(event) => setInputTodo(event.target.value)} />
+                <input type="text" value={inputTodo} onChange={(event) => setInputTodo(event.target.value)} placeholder='...give me todos' />
                 <input type="button" value="Add" onClick={addTodo} />
             </form>
             <ul>
