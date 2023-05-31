@@ -8,7 +8,7 @@ const TodoList = () => {
 
     useEffect(() => {
         const getData = async () => {
-            const result = await fetch('http://localhost:3004/todos', {});
+            const result = await fetch('http://localhost:3000/todos', {});
             const data = await result.json();
             setTodos(data);
         };

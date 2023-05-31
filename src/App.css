@@ -9,9 +9,10 @@
   background: rgb(202, 142, 247);
   background: linear-gradient(9deg, rgba(202, 142, 247, 1) 0%, rgb(178, 90, 255) 42%, rgb(119, 18, 213) 100%);
   border-radius: 10px;
-  margin: 5rem 3rem 0 3rem;
+  margin: 5rem auto 0 auto;
   text-align: center;
   height: 60%;
+  width: clamp(26rem, 60%, 60rem);
   border: 1px soli rgb(185, 151, 216);
   color: rgb(68, 19, 114);
 }
@@ -30,12 +31,6 @@ section form input {
   border: 1px solid rgb(185, 151, 216);
   margin: 10px;
 }
-
-
-input:checked .checkmark {
-  background-color: orange;
-}
-
 
 
 section ul div {
@@ -64,7 +59,7 @@ section ul div li span {
 }
 
 img {
-  width: 5.5%;
+  width: 2rem;
   border: 1px solid white;
   border-radius: 50px;
   margin: 0 10px 0 auto;
